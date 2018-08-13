@@ -1,5 +1,6 @@
 # MMM-QRCode
 QRCode module for MagicMirror². Show QRCode image of encoded text.
+This module is forked from: https://github.com/MarinescuEvghenii/MMM-QRCode
 
 ## Screenshot
 ![](.github/example.png)
@@ -13,7 +14,7 @@ cd ~/MagicMirror/modules
 
 Clone this repository:
 ````
-git clone git@github.com:MarinescuEvghenii/MMM-QRCode.git
+git clone https://github.com/basknol/MMM-QRCode.git
 ````
 
 Configure the module in your `config.js` file.
@@ -48,14 +49,14 @@ The following properties can be configured:
 	<thead>
 		<tr>
 			<th>Option</th>
-			<th width="75%">Description</th>
-			<th width="25%">Default value</th>
+			<th width="65%">Description</th>
+			<th width="35%">Default value</th>
 		</tr>
 	<thead>
 	<tbody>	
 		<tr>
 			<td>text</td>
-			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login: `WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;H:<true|false|>;` <br />MeCard format [see wiki](https://en.wikipedia.org/wiki/MeCard_(QR_code)): MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;</td>
+			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login: <code>WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;H:<true|false|>;</code> <br />MeCard format [see wiki](https://en.wikipedia.org/wiki/MeCard_(QR_code)): MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;</td>
 			<td>https://github.com/basknol/MMM-QRCode</td>
 		</tr>
 		<tr>
