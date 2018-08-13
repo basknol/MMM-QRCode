@@ -55,7 +55,7 @@ The following properties can be configured:
 	<tbody>	
 		<tr>
 			<td>text</td>
-			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login:<br /><code>WIFI:S:&lt;SSID&gt;;T:&lt;WPA|WEP&gt;;P:<password>;H:&lt;true|false&gt;;</code> <br /><br />MeCard format <a href="https://en.wikipedia.org/wiki/MeCard_(QR_code)">see wiki</a>:<br /><code>MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;</code><br />				
+			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login:<br /><code>WIFI:S:&lt;SSID&gt;;T:&lt;WPA|WEP&gt;;P:<password>;H:&lt;true|false&gt;;</code> <br /><br />MeCard format <a href="https://en.wikipedia.org/wiki/MeCard_(QR_code)">(see wiki)</a>:<br /><code>MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;</code><br />				
 				<br /><b>Default value:</b> <code>https://github.com/basknol/MMM-QRCode</code>
 				<br />This value is <b>OPTIONAL</b>			
 			</td>
@@ -83,14 +83,14 @@ The following properties can be configured:
 		</tr>
 		<tr>
 			<td>showRaw</td>
-			<td>Show raw text<br />
+			<td>Show raw text (= config option text) under the QR code<br />
 				<br /><b>Default value:</b> <code>true</code>
 				<br />This value is <b>OPTIONAL</b>	
 			</td>
 		</tr>		
 		<tr>
 			<td>hideModuleOnLoad</td>
-			<td>Hide this module if you don't want to show the QR code by default. Show the module only when needed, for example using the command <code>mm:hide module:MMM-QRCode</code> with the<a href="https://github.com/basknol/MMM-PushBulletNotifications">MMM-PushBulletNotifications</a> module or the <a href="https://github.com/Jopyth/MMM-Remote-Control">MMM-Remote-Control</a> module<br />						
+			<td>Hide this module if you don't want to show the QR code by default. Show the module only when needed, for example using the command <code>mm:show module:MMM-QRCode</code> with the <a href="https://github.com/basknol/MMM-PushBulletNotifications">MMM-PushBulletNotifications</a> module or the <a href="https://github.com/Jopyth/MMM-Remote-Control">MMM-Remote-Control</a> module<br />						
 				<br /><b>Default value:</b> <code>false</code>
 				<br />This value is <b>OPTIONAL</b>
 			</td>
