@@ -49,40 +49,52 @@ The following properties can be configured:
 	<thead>
 		<tr>
 			<th>Option</th>
-			<th width="65%">Description</th>
-			<th width="35%">Default value</th>
+			<th width="100%">Description</th>
 		</tr>
 	<thead>
 	<tbody>	
 		<tr>
 			<td>text</td>
-			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login: <code>WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;H:<true|false|>;</code> <br />MeCard format [see wiki](https://en.wikipedia.org/wiki/MeCard_(QR_code)): MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;</td>
-			<td>https://github.com/basknol/MMM-QRCode</td>
+			<td>The text to encode. <br /><br />For example: use the following format for WiFi network login: <code>WIFI:S:&lt;SSID&gt;;T:&lt;WPA|WEP&gt;;P:<password>;H:&lt;true|false&gt;;</code> <br /><br />MeCard format [see wiki](https://en.wikipedia.org/wiki/MeCard_(QR_code)): MECARD:N:Doe,John;TEL:13035551212;EMAIL:john.doe@example.com;;<br />				
+				<br /><b>Default value:</b> <code>https://github.com/basknol/MMM-QRCode</code>
+				<br />This value is <b>OPTIONAL</b>			
+			</td>
 		</tr>
 		<tr>
 			<td>colorDark</td>
-			<td>Draw color</td>
-			<td>"#fff" </td>
+			<td>Draw color<br />
+				<br /><b>Default value:</b> <code>"#fff"</code>
+				<br />This value is <b>OPTIONAL</b>						
+			</td>
 		</tr>	
 		<tr>
 			<td>colorLight</td>
-			<td>Background color</td>
-			<td>"#000"</td>
+			<td>Background color<br />
+				<br /><b>Default value:</b> <code>"#000"</code>
+				<br />This value is <b>OPTIONAL</b>		
+			</td>
 		</tr>
 		<tr>
 			<td>imageSize</td>
-			<td>Size of the image in px</td>
-			<td>150</td>
+			<td>Size of the image in px<br />
+				<br /><b>Default value:</b> <code>150</code>
+				<br />This value is <b>OPTIONAL</b>	
+			</td>
 		</tr>
 		<tr>
 			<td>showRaw</td>
-			<td>Show raw text </td>
-			<td>true</td>
+			<td>Show raw text<br />
+				<br /><b>Default value:</b> <code>true</code>
+				<br />This value is <b>OPTIONAL</b>	
+			</td>
 		</tr>		
 		<tr>
 			<td>hideModuleOnLoad</td>
-			<td>Hide this module if you don't want to show the QR code by default. Show the module only when needed, for example using the [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) module</td>
-			<td>false</td>
+			<td>Hide this module if you don't want to show the QR code by default. Show the module only when needed, for example using the [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) module<br />						
+				<br /><b>Default value:</b> <code>false</code>
+				<br />This value is <b>OPTIONAL</b>
+			</td>
+			</td>
 		</tr>	
 	</tbody>
 </table>
