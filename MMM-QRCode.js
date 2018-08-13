@@ -5,6 +5,8 @@
  *
  * By Evghenii Marinescu https://github.com/MarinescuEvghenii/
  * MIT Licensed.
+ * 
+ * Forked by Bas Knol https://github.com/basknol/MMM-QRCode
  */
 
 'use strict';
@@ -12,11 +14,12 @@
 Module.register("MMM-QRCode", {
 
 	defaults: {
-		text       : 'https://github.com/MarinescuEvghenii/MMM-QRCode',
-		colorDark  : "#fff",
+        text: 'https://github.com/basknol/MMM-QRCode',
+		colorDark : "#fff",
 		colorLight : "#000",
-		imageSize  : 150,
-		showRaw    : true
+		imageSize : 150,
+        showRaw: true,
+        hideModuleOnLoad: false,
 	},
 
 	getStyles: function() {
@@ -33,32 +36,40 @@ Module.register("MMM-QRCode", {
 		Log.log("Starting module: " + this.name);
 	},
 
-	getDom: function() {
+    getDom: function () {
+        var self = this;
 		const wrapperEl = document.createElement("div");
 		wrapperEl.classList.add('qrcode');
+                
+        const qrcodeEl = document.createElement("div");
+        new QRCode(qrcodeEl, {
+            text: this.config.text,
+            width: this.config.imageSize,
+            height: this.config.imageSize,
+            colorDark: this.config.colorDark,
+            colorLight: this.config.colorLight,
+            correctLevel: QRCode.CorrectLevel.H
+        });
 
-		const qrcodeEl  = document.createElement("div");
-		new QRCode(qrcodeEl, {
-			text: this.config.text,
-			width: this.config.imageSize,
-			height: this.config.imageSize,
-			colorDark : this.config.colorDark,
-			colorLight : this.config.colorLight,
-			correctLevel : QRCode.CorrectLevel.H
-		});
+        const imageEl = document.createElement("div");
+        imageEl.classList.add('qrcode__image');
+        imageEl.appendChild(qrcodeEl);
 
-		const imageEl  = document.createElement("div");
-		imageEl.classList.add('qrcode__image');
-		imageEl.appendChild(qrcodeEl);
+        wrapperEl.appendChild(imageEl);
 
-		wrapperEl.appendChild(imageEl);
+        if (this.config.showRaw) {
+            const textEl = document.createElement("div");
+            textEl.classList.add('qrcode__text');
+            textEl.innerHTML = this.config.text;
+            wrapperEl.appendChild(textEl);
+        }
 
-		if(this.config.showRaw) {
-			const textEl = document.createElement("div");
-			textEl.classList.add('qrcode__text');
-			textEl.innerHTML = this.config.text;
-			wrapperEl.appendChild(textEl);
-		}
+        if (this.config.hideModuleOnLoad) {
+            self.hide();            
+        }
+        else {
+            self.show();
+        }
 
 		return wrapperEl;
 	}
